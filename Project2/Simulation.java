@@ -39,13 +39,23 @@ public class Simulation {
 			conveyors[i] = new Conveyor(i);
 		}
 		
+		System.out.printf("* * * SIMULATION BEGINS * * *%n%n");
+		
 		for(int i = 0; i < n_stations; i++){
 			station_workload[i] = inf_scanner.nextInt();
-			stations[i] = new Station(station_workload[i], i);
-			
+			System.out.printf("Routing Station %d has a total workload of %d%n", i, station_workload[i]);
+			stations[i] = new Station(i);
+		}
+		
+		System.out.printf("%n%n");
+		
+		for(int i = 0; i < n_stations; i++){
 			stations[i].Input((i == 0) ? conveyors[0] : conveyors[i - 1]);
 			stations[i].Output((i == 0) ? conveyors[n_stations - 1] : conveyors[i]);
+			stations[i].setWorkload(station_workload[i]);
 		}
+		
+		System.out.printf("%n%n");
 		
 		ExecutorService simThreadPool = Executors.newFixedThreadPool(n_stations);
 		for(int i = 0; i < n_stations; i++){
