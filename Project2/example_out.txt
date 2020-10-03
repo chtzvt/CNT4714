@@ -1,0 +1,122 @@
+* * * SIMULATION BEGINS * * *
+
+Routing Station 0 has a total workload of 2
+Routing Station 1 has a total workload of 3
+Routing Station 2 has a total workload of 4
+
+
+Routing Station 0: input connection is set to conveyor number C0
+Routing Station 0: output connection is set to conveyor number C2
+Routing Station 0: Workload set. Station 0 has a total of 0 package groups to move.
+Routing Station 1: input connection is set to conveyor number C0
+Routing Station 1: output connection is set to conveyor number C1
+Routing Station 1: Workload set. Station 1 has a total of 0 package groups to move.
+Routing Station 2: input connection is set to conveyor number C1
+Routing Station 2: output connection is set to conveyor number C2
+Routing Station 2: Workload set. Station 2 has a total of 0 package groups to move.
+
+
+Routing Station 0: holds lock on input conveyor number C0
+Routing Station 0: holds lock on output conveyor number C2
+Routing Station 0: *** Now moving packages. ***
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 0: successfully moves packages into station on input conveyor number C0
+Routing Station 2: unable to lock output conveyor – releasing lock on input conveyor number C2.
+Routing Station 0: successfully moves packages out of station on output conveyor number C2
+Routing Station 0: has 1 package groups left to move.
+
+
+Routing Station 0: unlocks input conveyor number C0
+Routing Station 0: unlocks output conveyor number C2
+Routing Station 1: holds lock on input conveyor number C0
+Routing Station 1: holds lock on output conveyor number C1
+Routing Station 1: *** Now moving packages. ***
+Routing Station 1: successfully moves packages into station on input conveyor number C0
+Routing Station 1: successfully moves packages out of station on output conveyor number C1
+Routing Station 1: has 2 package groups left to move.
+
+
+Routing Station 1: unlocks input conveyor number C0
+Routing Station 1: unlocks output conveyor number C1
+Routing Station 0: holds lock on input conveyor number C0
+Routing Station 0: holds lock on output conveyor number C2
+Routing Station 0: *** Now moving packages. ***
+Routing Station 0: successfully moves packages into station on input conveyor number C0
+Routing Station 0: successfully moves packages out of station on output conveyor number C2
+Routing Station 0: has 0 package groups left to move.
+
+
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: unable to lock output conveyor – releasing lock on input conveyor number C2.
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: unable to lock output conveyor – releasing lock on input conveyor number C2.
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: unable to lock output conveyor – releasing lock on input conveyor number C2.
+Routing Station 0: unlocks input conveyor number C0
+Routing Station 0: unlocks output conveyor number C2
+Routing Station 1: holds lock on input conveyor number C0
+Routing Station 1: holds lock on output conveyor number C1
+Routing Station 1: *** Now moving packages. ***
+Routing Station 1: successfully moves packages into station on input conveyor number C0
+Routing Station 1: successfully moves packages out of station on output conveyor number C1
+Routing Station 1: has 1 package groups left to move.
+
+
+* * Station 0: Workload successfully completed. * *
+
+Routing Station 1: unlocks input conveyor number C0
+Routing Station 1: unlocks output conveyor number C1
+Routing Station 1: holds lock on input conveyor number C0
+Routing Station 1: holds lock on output conveyor number C1
+Routing Station 1: *** Now moving packages. ***
+Routing Station 1: successfully moves packages into station on input conveyor number C0
+Routing Station 1: successfully moves packages out of station on output conveyor number C1
+Routing Station 1: has 0 package groups left to move.
+
+
+Routing Station 1: unlocks input conveyor number C0
+Routing Station 1: unlocks output conveyor number C1
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: holds lock on output conveyor number C2
+Routing Station 2: *** Now moving packages. ***
+Routing Station 2: successfully moves packages into station on input conveyor number C1
+Routing Station 2: successfully moves packages out of station on output conveyor number C2
+Routing Station 2: has 3 package groups left to move.
+
+
+* * Station 1: Workload successfully completed. * *
+
+Routing Station 2: unlocks input conveyor number C1
+Routing Station 2: unlocks output conveyor number C2
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: holds lock on output conveyor number C2
+Routing Station 2: *** Now moving packages. ***
+Routing Station 2: successfully moves packages into station on input conveyor number C1
+Routing Station 2: successfully moves packages out of station on output conveyor number C2
+Routing Station 2: has 2 package groups left to move.
+
+
+Routing Station 2: unlocks input conveyor number C1
+Routing Station 2: unlocks output conveyor number C2
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: holds lock on output conveyor number C2
+Routing Station 2: *** Now moving packages. ***
+Routing Station 2: successfully moves packages into station on input conveyor number C1
+Routing Station 2: successfully moves packages out of station on output conveyor number C2
+Routing Station 2: has 1 package groups left to move.
+
+
+Routing Station 2: unlocks input conveyor number C1
+Routing Station 2: unlocks output conveyor number C2
+Routing Station 2: holds lock on input conveyor number C1
+Routing Station 2: holds lock on output conveyor number C2
+Routing Station 2: *** Now moving packages. ***
+Routing Station 2: successfully moves packages into station on input conveyor number C1
+Routing Station 2: successfully moves packages out of station on output conveyor number C2
+Routing Station 2: has 0 package groups left to move.
+
+
+Routing Station 2: unlocks input conveyor number C1
+Routing Station 2: unlocks output conveyor number C2
+* * Station 2: Workload successfully completed. * *
+
