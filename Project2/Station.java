@@ -1,3 +1,9 @@
+/*
+	Name: Charlton Trezevant
+	Course: CNT 4714 Fall 2020
+	Assignment title: Project 2 – Multi-threaded programming in Java
+*/
+
 import java.util.Random;
 
 public class Station implements Runnable {
