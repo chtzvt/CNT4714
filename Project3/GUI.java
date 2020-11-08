@@ -32,7 +32,6 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class GUI extends JFrame {
-	
 	private JLabel driver, dbURL, usernameLbl, passwordLbl, status;
 	private JComboBox drivers, urlList;
 	private JTextField username;
@@ -91,7 +90,6 @@ public class GUI extends JFrame {
 		lblFields.add(this.passwordLbl);
 		lblFields.add(this.password);
 		
-		
 		JPanel north = new JPanel(new GridLayout(2, 2));
 		north.add(leftHeader);
 		north.add(rightHeader);
@@ -126,7 +124,6 @@ public class GUI extends JFrame {
 		return new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent a){
-				
 				if(connected){
 					try{
 						conn.close();
@@ -150,7 +147,6 @@ public class GUI extends JFrame {
 					e.printStackTrace();
 				}
 			
-			
 			try {
 				conn = DriverManager.getConnection(String.valueOf(urlList.getSelectedItem()), username.getText(), password.getText());
 				status.setText("Connected to " + String.valueOf(urlList.getSelectedItem()));
@@ -163,7 +159,7 @@ public class GUI extends JFrame {
 				modelTable = null;
 				e.printStackTrace();
 			}
-		}
+		 }
 		};
 	}
 	
