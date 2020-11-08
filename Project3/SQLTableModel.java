@@ -1,3 +1,9 @@
+/*
+	Name: Charlton Trezevant
+	Course: CNT 4714 Fall 2020
+	Assignment title: Project 23 - Two-Tier Client-Server Application Development With MySQL and JDBC
+*/
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
