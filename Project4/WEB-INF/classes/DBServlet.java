@@ -29,6 +29,14 @@ public class DBServlet extends HttpServlet {
 	}
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		handle(req, res);
+	}
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		handle(req, res);
+	}
+	
+	private void handle(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String query = req.getParameter("query");
 		String resBody = "";
 		
@@ -49,14 +57,10 @@ public class DBServlet extends HttpServlet {
 		}
 		
 		HttpSession sess = req.getSession();
-		sess.setAttribute("result", resBody);
 		sess.setAttribute("query", query);
+		sess.setAttribute("result", resBody);
 		RequestDispatcher disp = getServletContext().getRequestDispatcher("/index.jsp");
 		disp.forward(req, res);
-	}
-	
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		doGet(req, res);
 	}
 	
 	private String select(String query) throws SQLException {
@@ -93,17 +97,17 @@ public class DBServlet extends HttpServlet {
 		cmd.executeUpdate("INSERT INTO tmpshipments SELECT * FROM shipments");
 		
 		int numUpdated = cmd.executeUpdate(query);
-		html += "<span>" + numUpdated + " rows updated.</span>";
+		html += "<span>" + numUpdated + " rows updated.</span><br />";
 		
 		ResultSet after = cmd.executeQuery("SELECT COUNT(*) FROM shipments WHERE quantity >= 100");
 		after.next();
 		int afterNum = after.getInt(1);
 		
-		html += "<span>" + initNum + " shipments of quantity > 100 prior to update, " + afterNum + " total now in db</span>";
+		html += "<br /><span>" + initNum + " shipments of quantity > 100 prior to update, " + afterNum + " total now in db</span><br />";
 		
 		if(initNum < afterNum){
 			int tmp = cmd.executeUpdate("UPDATE suppliers SET status = status+5 WHERE snum IN (SELECT DISTINCT snum FROM shipments LEFT JOIN tmpshipments USING (snum,pnum,jnum,quantity) WHERE tmpshipments.snum IS NULL)");
-			html += "<span>Business logic - updated " + tmp + " supplier statuses</span>";
+			html += "<br /><span>Business logic - updated " + tmp + " supplier statuses</span>";
 		}
 		
 		cmd.executeUpdate("DROP TABLE tmpshipments");
