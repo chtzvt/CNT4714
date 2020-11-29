@@ -1,4 +1,14 @@
 <!doctype html>
+
+<%--
+/*
+  Name: Charlton Trezevant
+  Course: CNT 4714 - Fall 2020 - Project Four
+  Assignment title: A Three-Tier Distributed Web-Based Application
+  Date: December 4, 2020
+*/
+--%>
+
 <%
   String query = "", result = "*";
 
