@@ -32,6 +32,6 @@
 
   <servlet-mapping>
     <servlet-name>DBServlet</servlet-name>
-    <url-pattern>/DBServlet</url-pattern>
+    <url-pattern>/exec</url-pattern>
   </servlet-mapping>
 </web-app>
